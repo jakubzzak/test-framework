@@ -1,0 +1,108 @@
+{
+  "/Users/jakubzak/Developer/test-framework/examples/sls-app": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.7",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/jakubzak/Developer/test-framework/examples/sls-app",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "sls-app",
+      "frameworkVersion": "4",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "region": "eu-central-1",
+        "architecture": "arm64",
+        "stage": "dev",
+        "versionFunctions": true
+      },
+      "functions": {
+        "hello": {
+          "handler": "src/handlers/greet/main.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/api/v1/health",
+                "method": "get"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "service: sls-app\nframeworkVersion: '4'\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  region: eu-central-1\n  architecture: arm64\n\nfunctions:\n  hello:\n    handler: src/handlers/greet/main.handler\n    events:\n      - http:\n          path: /api/v1/health\n          method: get\n",
+    "command": [
+      "offline"
+    ],
+    "options": {},
+    "error": {
+      "message": "Serverless command \"offline\" not found. Run \"serverless help\" for a list of all available commands.",
+      "code": "UNRECOGNIZED_CLI_COMMAND"
+    },
+    "params": {},
+    "machineId": "9e51ed9a2aa3243819106a8912db380f",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "53a148a4-ef36-414d-83f2-01a983e01ce0",
+    "orgName": "jzsteam",
+    "userId": "Bfhy4yQztRL8psX9MH",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "jzsteam",
+    "subscription": null,
+    "userEmail": "zak.jakub67@gmail.com",
+    "serviceProviderAwsRegion": "eu-central-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "641906578304",
+    "projectType": "traditional",
+    "versionSf": "4.4.7",
+    "serviceProviderAwsCfStackName": "sls-app-dev",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:eu-central-1:641906578304:stack/admin-api-prod/bfb74520-afd4-11ed-9c02-0242dc6826dc",
+    "serviceProviderAwsCfStackCreated": "2023-02-18T21:39:40.415Z",
+    "serviceProviderAwsCfStackUpdated": "2024-10-24T17:57:23.437Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "DomainName",
+        "OutputValue": "admin-api.graitor.com",
+        "ExportName": "sls-admin-api-prod-DomainName"
+      },
+      {
+        "OutputKey": "HostedZoneId",
+        "OutputValue": "Z1U9ULNL0V5AJ3",
+        "ExportName": "sls-admin-api-prod-HostedZoneId"
+      },
+      {
+        "OutputKey": "DistributionDomainName",
+        "OutputValue": "d-yyav1wed8g.execute-api.eu-central-1.amazonaws.com",
+        "ExportName": "sls-admin-api-prod-DistributionDomainName"
+      },
+      {
+        "OutputKey": "ServiceEndpoint",
+        "OutputValue": "https://w7l98uk9w3.execute-api.eu-central-1.amazonaws.com/prod",
+        "Description": "URL of the service endpoint",
+        "ExportName": "sls-admin-api-prod-ServiceEndpoint"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "admin-api-prod-serverlessdeploymentbucket-wythag75sh3f",
+        "ExportName": "sls-admin-api-prod-ServerlessDeploymentBucketName"
+      }
+    ]
+  }
+}

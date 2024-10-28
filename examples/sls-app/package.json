@@ -1,0 +1,22 @@
+{
+  "name": "sls-app",
+  "version": "1.0.0",
+  "description": "Example 1",
+  "scripts": {
+    "start": "sls offline",
+    "build": "tsc",
+    "test": "jest --config ./jest.config.ts"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@types/aws-lambda": "^8.10.145",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.7.9",
+    "serverless": "^4.4.7",
+    "serverless-offline": "^14.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

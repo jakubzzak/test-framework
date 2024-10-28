@@ -1,0 +1,29 @@
+{
+  "name": "test-framework",
+  "version": "1.0.0",
+  "description": "Jest wrapper to boost your productivity without any compromise on your test coverage with TDD in mind",
+  "main": "",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jest.config.ts --onlyChanged --coverage",
+    "test:all": "jest --config jest.config.ts --all --coverage --coverageReporters=json-summary",
+    "test:ci": "jest --config jest.config.ts --onlyChanged",
+    "test:logs": "jest --config jest.config.ts --silent=false",
+    "test:watch": "jest --config jest-config.json --watch"
+  },
+  "author": {
+    "name": "Jakub Zak",
+    "email": "zak.jakub67@gmail.com",
+    "url": "https://github.com/jakubzzak"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@types/aws-lambda": "^8.10.145",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.7.9",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

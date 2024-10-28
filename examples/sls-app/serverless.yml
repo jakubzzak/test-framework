@@ -1,0 +1,23 @@
+service: sls-app
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-central-1
+  architecture: arm64
+
+custom:
+  serverless-offline:
+    noPrependStageInUrl: true
+
+functions:
+  hello:
+    handler: src/handlers/greet/main.handler
+    events:
+      - http:
+          path: /api/v1/greet
+          method: get
+
+plugins:
+  - serverless-offline
